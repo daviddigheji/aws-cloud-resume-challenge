@@ -12,6 +12,9 @@ User → CloudFront → S3
                  ↓
             API Gateway → Lambda → DynamoDB
 
+<img width="260" height="540" alt="image" src="https://github.com/user-attachments/assets/c9697b4f-92d5-432b-8612-c37b6a1598f3" />
+
+
 ## Technologies Used
 - AWS S3 (Static hosting)
 - AWS CloudFront (CDN)
