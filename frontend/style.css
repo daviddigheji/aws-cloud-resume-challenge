@@ -17,7 +17,7 @@ body {
 .container {
   width: 90%;
   max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /* Header */
@@ -30,18 +30,30 @@ header {
 .header-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  margin-bottom: 6px;
 }
 
 .subtitle {
   color: #38bdf8;
   font-weight: 500;
+  margin-bottom: 4px;
 }
 
 /* Links */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .links a {
   color: #38bdf8;
-  margin-left: 15px;
   text-decoration: none;
   font-weight: 500;
 }
@@ -58,6 +70,10 @@ section {
 h2 {
   margin-bottom: 15px;
   color: #38bdf8;
+}
+
+h3 {
+  margin-bottom: 8px;
 }
 
 /* Cards */
@@ -90,6 +106,23 @@ ul {
   margin-bottom: 8px;
 }
 
+/* Meta text */
+.meta {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+/* Contact links */
+main a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -98,18 +131,14 @@ footer {
   margin-top: 40px;
 }
 
-/* ========================= */
-/* 🔥 Visitor Counter Styling */
-/* ========================= */
-
+/* Visitor Counter Styling */
 #visitor-count {
   font-weight: bold;
   color: #00ffc3;
   font-size: 1.1rem;
 }
 
-/* Container for visitor count */
-.header-content p:last-child {
+.counter-box {
   margin-top: 10px;
   font-size: 0.95rem;
   background: rgba(0, 255, 195, 0.08);
@@ -119,7 +148,18 @@ footer {
   border: 1px solid rgba(0, 255, 195, 0.2);
 }
 
-/* Optional hover effect */
-.header-content p:last-child:hover {
+.counter-box:hover {
   background: rgba(0, 255, 195, 0.15);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    margin-top: 10px;
+  }
 }
