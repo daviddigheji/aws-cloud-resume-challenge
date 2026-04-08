@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Digheji | Cloud Engineer</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+    <div>
+      <h1>David Digheji</h1>
+      <p class="subtitle">Cloud Engineer | DevSecOps</p>
+      <p>London, UK</p>
+      <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
+    </div>
+
+    <div class="links">
+      <a href="https://www.linkedin.com/in/daviddigheji/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/daviddigheji" target="_blank">GitHub</a>
+      <a href="https://www.daviddigheji.com" target="_blank">Portfolio</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<section>
+  <h2>About</h2>
+  <p>
+    Performance-driven Cloud Engineer with 10+ years of experience in IT infrastructure and systems administration.
+    Specialized in AWS cloud, DevOps automation, and building secure, scalable systems. Proven track record maintaining
+    high availability and delivering production-ready cloud solutions.
+  </p>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Cloud Resume Challenge</h3>
+    <ul>
+      <li>Deployed serverless resume website using AWS S3 and CloudFront</li>
+      <li>Implemented backend with Lambda, API Gateway, and DynamoDB</li>
+      <li>Configured DNS, HTTPS, and security policies</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>High Availability Architecture</h3>
+    <ul>
+      <li>Configured load balancing across multiple EC2 instances</li>
+      <li>Designed system for fault tolerance and scalability</li>
+    </ul>
+  </div>
+
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Cloud</h3>
+      <p>AWS (EC2, S3, VPC, IAM, CloudFront), Azure</p>
+    </div>
+    <div class="card">
+      <h3>DevOps</h3>
+      <p>Terraform, CI/CD, GitHub Actions, Bash</p>
+    </div>
+    <div class="card">
+      <h3>Systems</h3>
+      <p>Linux, Windows Server, macOS</p>
+    </div>
+    <div class="card">
+      <h3>Networking</h3>
+      <p>TCP/IP, DNS, VPN, VLANs, Routing (CCNA)</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="card">
+    <h3>DevSecOps Engineer</h3>
+    <p class="meta">CyberAgoge | Sept 2024 – Present</p>
+    <ul>
+      <li>Automated AWS infrastructure (S3, EC2, VPC) using Terraform</li>
+      <li>Reduced deployment time by 50%</li>
+      <li>Integrated SAST/DAST into CI/CD pipelines</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>IT Manager</h3>
+    <p class="meta">GP Global | Jan 2020 – Aug 2024</p>
+    <ul>
+      <li>Led IT operations across multiple regions</li>
+      <li>Maintained 99.9% uptime across infrastructure</li>
+      <li>Improved network performance by 25%</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Helpdesk Engineer</h3>
+    <p class="meta">Conoil Plc | Jan 2007 – Dec 2019</p>
+    <ul>
+      <li>Supported 100+ users and devices</li>
+      <li>Consistently met SLA targets</li>
+    </ul>
+  </div>
+
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <ul class="simple-list">
+    <li>AWS Certified Cloud Practitioner</li>
+    <li>HashiCorp Terraform Associate</li>
+    <li>Cisco Certified Network Associate (CCNA)</li>
+    <li>CompTIA Security+</li>
+    <li>AWS Solutions Architect Associate (In Progress)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <ul class="simple-list">
+    <li>MSc Data Science – University of Greenwich</li>
+    <li>BSc Computer Science – Lagos State University</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: david@daviddigheji.com</p>
+  <p>Website: www.daviddigheji.com</p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 David Digheji</p>
+</footer>
+
+<script>
+  fetch("https://3k8pfdds4k.execute-api.eu-west-2.amazonaws.com/prod/counter")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("visitor-count").textContent = data;
+    })
+    .catch(error => {
+      console.error("Error fetching visitor count:", error);
+      document.getElementById("visitor-count").textContent = "Unavailable";
+    });
+</script>
+
+</body>
+</html>
