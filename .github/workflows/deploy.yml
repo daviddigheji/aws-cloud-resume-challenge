@@ -22,7 +22,5 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync . s3://daviddigheji.com --delete \
-            --exclude ".git/*" \
-            --exclude ".github/*" \
-            --exclude "README.md"
+          aws s3 sync ./frontend s3://YOUR-BUCKET-NAME --delete
+            
