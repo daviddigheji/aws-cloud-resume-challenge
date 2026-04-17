@@ -1,0 +1,125 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: #020617;
+  padding: 20px 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle {
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+/* Links */
+.links a {
+  color: #38bdf8;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  margin: 40px 0;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #38bdf8;
+}
+
+/* Cards */
+.card {
+  background: #020617;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* Lists */
+ul {
+  margin-left: 20px;
+}
+
+.simple-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.simple-list li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #1e293b;
+  margin-top: 40px;
+}
+
+/* ========================= */
+/* 🔥 Visitor Counter Styling */
+/* ========================= */
+
+#visitor-count {
+  font-weight: bold;
+  color: #00ffc3;
+  font-size: 1.1rem;
+}
+
+/* Container for visitor count */
+.header-content p:last-child {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  background: rgba(0, 255, 195, 0.08);
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  border: 1px solid rgba(0, 255, 195, 0.2);
+}
+
+/* Optional hover effect */
+.header-content p:last-child:hover {
+  background: rgba(0, 255, 195, 0.15);
+}

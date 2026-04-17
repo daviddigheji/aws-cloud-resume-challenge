@@ -1,4 +1,4 @@
-name: Deploy website to S3
+name: Deploy Cloud Resume Website
 
 on:
   push:
@@ -20,6 +20,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-2
 
-      - name: Deploy website files to S3
-        run: |
-          aws s3 sync ./frontend s3://daviddigheji.com --delete
+      - name: Sync frontend files to S3
+        run: aws s3 sync frontend/ s3://daviddigheji.com --delete
+
+      - name: Invalidate CloudFront cache
+        run: aws cloudfront create-invalidation --distribution-id E2ODEMEIX05YY8 --paths "/*"
