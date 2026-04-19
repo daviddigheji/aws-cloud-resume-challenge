@@ -1,133 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Digheji | Cloud Engineer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Digheji | Cloud Engineer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-    <header>
+  <header>
+    <div class="container header-content">
+      <div class="hero-text">
         <h1>David Digheji</h1>
-        <h2>Cloud Engineer | AWS | Terraform | DevOps</h2>
+        <p class="subtitle">Cloud Engineer | AWS | Terraform | DevOps</p>
         <p>London, United Kingdom</p>
-        <p>Visitor Count: <span id="counter">Loading...</span></p>
+        <div class="counter-box">
+          Visitor Count: <span id="visitor-count">Loading...</span>
+        </div>
+      </div>
 
-        <nav>
-            <a href="https://linkedin.com/in/david-digheji" target="_blank">LinkedIn</a>
-            <a href="https://github.com/daviddigheji" target="_blank">GitHub</a>
-            <a href="https://daviddigheji.com" target="_blank">Portfolio</a>
-        </nav>
-    </header>
+      <div class="links">
+        <a href="https://linkedin.com/in/david-digheji" target="_blank">LinkedIn</a>
+        <a href="https://github.com/daviddigheji" target="_blank">GitHub</a>
+        <a href="https://daviddigheji.com" target="_blank">Portfolio</a>
+      </div>
+    </div>
+  </header>
 
+  <main class="container">
     <section>
-        <h3>About</h3>
+      <h2>About</h2>
+      <div class="card">
         <p>
-            Cloud-focused IT professional with 10+ years of experience in infrastructure, operations, and support. 
-            Currently transitioning into Cloud and DevOps roles with hands-on experience building AWS-based solutions 
-            using Terraform and serverless technologies. Strong in troubleshooting, system reliability, and scalable cloud architecture.
+          Cloud-focused IT professional with 10+ years of experience in infrastructure,
+          operations, and support. Currently transitioning into Cloud and DevOps roles
+          with hands-on experience building AWS-based solutions using Terraform and
+          serverless technologies. Strong in troubleshooting, system reliability, and
+          scalable cloud architecture.
         </p>
+      </div>
     </section>
 
     <section>
-        <h3>Projects</h3>
+      <h2>Projects</h2>
 
-        <h4>Cloud Resume Challenge</h4>
+      <div class="card">
+        <h3>Cloud Resume Challenge</h3>
         <ul>
-            <li>Built and deployed a static resume website using Amazon S3 and CloudFront with HTTPS</li>
-            <li>Configured custom domain and DNS using Route 53 / Cloudflare</li>
-            <li>Implemented a serverless visitor counter using Lambda, API Gateway, and DynamoDB</li>
-            <li>Resolved Lambda JSON serialization, DynamoDB IAM permission, and CloudFront caching issues</li>
+          <li>Built and deployed a static resume website using Amazon S3 and CloudFront with HTTPS</li>
+          <li>Configured custom domain and DNS using Route 53 / Cloudflare</li>
+          <li>Implemented a serverless visitor counter using Lambda, API Gateway, and DynamoDB</li>
+          <li>Resolved Lambda JSON serialization, DynamoDB IAM permission, and CloudFront caching issues</li>
         </ul>
+      </div>
 
-        <h4>AWS ECS Fargate Platform with Terraform</h4>
+      <div class="card">
+        <h3>AWS ECS Fargate Platform with Terraform</h3>
         <ul>
-            <li>Designed AWS infrastructure using Terraform with remote state in S3 and DynamoDB</li>
-            <li>Built a custom VPC with public/private subnets, Internet Gateway, NAT Gateway, and route tables</li>
-            <li>Applied modular Terraform design for scalability and reuse</li>
-            <li>Integrated ECS Fargate, Application Load Balancer, and CloudWatch monitoring</li>
+          <li>Designed AWS infrastructure using Terraform with remote state in S3 and DynamoDB</li>
+          <li>Built a custom VPC with public/private subnets, Internet Gateway, NAT Gateway, and route tables</li>
+          <li>Applied modular Terraform design for scalability and reuse</li>
+          <li>Integrated ECS Fargate, Application Load Balancer, and CloudWatch monitoring</li>
         </ul>
+      </div>
     </section>
 
     <section>
-        <h3>Technical Skills</h3>
+      <h2>Technical Skills</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Cloud & DevOps</h3>
+          <p>
+            AWS (S3, EC2, ECS Fargate, Lambda, API Gateway, DynamoDB, CloudFront, IAM,
+            Route 53, CloudWatch), Terraform, Docker, GitHub Actions
+          </p>
+        </div>
 
-        <h4>Cloud & DevOps</h4>
-        <p>AWS (S3, EC2, ECS Fargate, Lambda, API Gateway, DynamoDB, CloudFront, IAM, Route 53, CloudWatch), Terraform, Docker, GitHub Actions</p>
+        <div class="card">
+          <h3>Systems & Networking</h3>
+          <p>
+            Windows Server, Active Directory, DNS, DHCP, VMware, Hyper-V, Cisco, Fortinet
+          </p>
+        </div>
 
-        <h4>Systems & Networking</h4>
-        <p>Windows Server, Active Directory, DNS, DHCP, VMware, Hyper-V, Cisco, Fortinet</p>
-
-        <h4>Scripting & Tools</h4>
-        <p>Python, Bash, PowerShell, Git, VS Code, draw.io</p>
+        <div class="card">
+          <h3>Scripting & Tools</h3>
+          <p>
+            Python, Bash, PowerShell, Git, VS Code, draw.io
+          </p>
+        </div>
+      </div>
     </section>
 
     <section>
-        <h3>Certifications</h3>
-        <ul>
-            <li>AWS Cloud Practitioner</li>
-            <li>Terraform Associate</li>
-            <li>CCNA</li>
-            <li>CompTIA Security+</li>
-            <li>AWS Solutions Architect Associate (In Progress)</li>
+      <h2>Certifications</h2>
+      <div class="card">
+        <ul class="simple-list">
+          <li>AWS Cloud Practitioner</li>
+          <li>Terraform Associate</li>
+          <li>CCNA</li>
+          <li>CompTIA Security+</li>
+          <li>AWS Solutions Architect Associate (In Progress)</li>
         </ul>
+      </div>
     </section>
 
     <section>
-        <h3>Training</h3>
-        <p><strong>DevSecOps Bootcamp – CyberAgoge</strong></p>
+      <h2>Training</h2>
+      <div class="card">
+        <h3>DevSecOps Bootcamp – CyberAgoge</h3>
         <ul>
-            <li>Built AWS infrastructure using Terraform across EC2, S3, and VPC environments</li>
-            <li>Implemented SAST and DAST security checks in CI/CD pipelines</li>
-            <li>Gained practical experience in secure deployment and automation workflows</li>
+          <li>Built AWS infrastructure using Terraform across EC2, S3, and VPC environments</li>
+          <li>Implemented SAST and DAST security checks in CI/CD pipelines</li>
+          <li>Gained practical experience in secure deployment and automation workflows</li>
         </ul>
+      </div>
     </section>
 
     <section>
-        <h3>Professional Experience</h3>
+      <h2>Professional Experience</h2>
 
-        <h4>IT Manager</h4>
-        <p>We Are Delta (formerly GP Global) | Jan 2020 – May 2022</p>
+      <div class="card">
+        <h3>IT Manager</h3>
+        <p class="meta">We Are Delta (formerly GP Global) | Jan 2020 – May 2022</p>
         <ul>
-            <li>Led IT operations supporting 50+ users across multiple locations</li>
-            <li>Achieved 95% ISO 9001:2015 compliance</li>
-            <li>Maintained 99.9% uptime for critical systems</li>
-            <li>Improved network performance by 45%</li>
-            <li>Reduced procurement costs by 20%</li>
+          <li>Led IT operations supporting 50+ users across multiple locations</li>
+          <li>Achieved 95% ISO 9001:2015 compliance</li>
+          <li>Maintained 99.9% uptime for critical systems</li>
+          <li>Improved network performance by 45%</li>
+          <li>Reduced procurement costs by 20%</li>
         </ul>
+      </div>
 
-        <h4>Help Desk / Network Engineer</h4>
-        <p>Conoil Plc | Jun 2007 – Dec 2019</p>
+      <div class="card">
+        <h3>Help Desk / Network Engineer</h3>
+        <p class="meta">Conoil Plc | Jun 2007 – Dec 2019</p>
         <ul>
-            <li>Supported 150+ users across desktops, printers, and network systems</li>
-            <li>Resolved 80% of incidents within 24 hours</li>
-            <li>Improved LAN performance by 20% through network optimisation</li>
+          <li>Supported 150+ users across desktops, printers, and network systems</li>
+          <li>Resolved 80% of incidents within 24 hours</li>
+          <li>Improved LAN performance by 20% through network optimisation</li>
         </ul>
+      </div>
     </section>
 
     <section>
-        <h3>Education</h3>
+      <h2>Education</h2>
+      <div class="card">
         <p>MSc Data Science – University of Greenwich, London</p>
         <p>BSc Computer Science – Lagos State University, Lagos</p>
+      </div>
     </section>
 
     <section>
-        <h3>Contact</h3>
-        <p>Email: david@daviddigheji.com</p>
-        <p>Website: www.daviddigheji.com</p>
-        <p>GitHub: github.com/daviddigheji</p>
-        <p>LinkedIn: linkedin.com/in/david-digheji</p>
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:david@daviddigheji.com">david@daviddigheji.com</a></p>
+        <p>Website: <a href="https://www.daviddigheji.com" target="_blank">www.daviddigheji.com</a></p>
+        <p>GitHub: <a href="https://github.com/daviddigheji" target="_blank">github.com/daviddigheji</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/david-digheji" target="_blank">linkedin.com/in/david-digheji</a></p>
+      </div>
     </section>
+  </main>
 
-    <script>
-        fetch("https://3k8pfdds4k.execute-api.eu-west-2.amazonaws.com/prod/counter")
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("counter").innerText = data;
-            })
-            .catch(error => console.log("Error:", error));
-    </script>
+  <footer>
+    <p>© 2026 David Digheji</p>
+  </footer>
 
+  <script>
+    fetch("https://3k8pfdds4k.execute-api.eu-west-2.amazonaws.com/prod/counter")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("visitor-count").innerText = data;
+      })
+      .catch(error => console.log("Error:", error));
+  </script>
 </body>
 </html>
