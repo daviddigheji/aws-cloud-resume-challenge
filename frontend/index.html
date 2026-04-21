@@ -3,129 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>David Digheji - Cloud Engineer</title>
+  <title>David Digheji | Cloud Engineer</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <h1>David Digheji</h1>
-      <p class="subtitle">Cloud Engineer | AWS | Terraform | DevOps</p>
-      <p class="location">London, United Kingdom</p>
-      <p class="visitor">Visitor Count: <span id="counter">221</span></p>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      
+      <div class="hero-text">
+        <h1>David Digheji</h1>
+        <p class="subtitle">Cloud Engineer | AWS | Terraform | DevOps</p>
+        <p class="location">London, United Kingdom</p>
+      </div>
 
       <div class="links">
-        <a href="https://linkedin.com/in/david-digheji" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/daviddigheji" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://daviddigheji.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        <a href="https://linkedin.com/in/david-digheji" target="_blank">LinkedIn</a>
+        <a href="https://github.com/daviddigheji" target="_blank">GitHub</a>
+        <a href="#">Portfolio</a>
       </div>
-    </header>
 
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+
+    <!-- Visitor Count -->
+    <section class="visitor">
+      <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
+    </section>
+
+    <!-- About -->
     <section>
       <h2>About</h2>
       <p>
-        Cloud-focused IT professional with 10+ years of experience in infrastructure, operations, and support.
-        Currently transitioning into Cloud and DevOps roles with hands-on experience building AWS-based solutions
-        using Terraform and serverless technologies. Strong in troubleshooting, system reliability, and scalable cloud architecture.
+        Cloud-focused IT professional with 10+ years of experience in infrastructure,
+        operations, and support. Currently transitioning into Cloud and DevOps roles
+        with hands-on experience building AWS-based solutions using Terraform and
+        serverless technologies.
       </p>
     </section>
 
+    <!-- Projects -->
     <section>
       <h2>Projects</h2>
 
-      <h3>Cloud Resume Challenge</h3>
-      <ul>
-        <li>Built and deployed a static resume website using Amazon S3 and CloudFront with HTTPS</li>
-        <li>Configured custom domain and DNS using Route 53 / Cloudflare</li>
-        <li>Implemented a serverless visitor counter using Lambda, API Gateway, and DynamoDB</li>
-        <li>Resolved Lambda JSON serialization, DynamoDB IAM permission, and CloudFront caching issues</li>
-      </ul>
+      <div class="project">
+        <h3>Cloud Resume Challenge</h3>
+        <ul>
+          <li>Built and deployed a static resume website using Amazon S3 and CloudFront with HTTPS</li>
+          <li>Configured custom domain and DNS using Route 53 / Cloudflare</li>
+          <li>Implemented serverless visitor counter using Lambda, DynamoDB, and API Gateway</li>
+          <li>Automated deployment using GitHub Actions</li>
+        </ul>
+      </div>
 
-      <h3>AWS ECS Fargate Platform with Terraform</h3>
-      <ul>
-        <li>Designed AWS infrastructure using Terraform with remote state in S3 and DynamoDB</li>
-        <li>Built a custom VPC with public/private subnets, Internet Gateway, NAT Gateway, and route tables</li>
-        <li>Applied modular Terraform design for scalability and reuse</li>
-        <li>Integrated ECS Fargate, Application Load Balancer, and CloudWatch monitoring</li>
-      </ul>
+      <div class="project">
+        <h3>Production-Ready AWS ECS Platform with Terraform</h3>
+        <ul>
+          <li>Designed and built AWS infrastructure using Terraform</li>
+          <li>Implemented VPC with public/private subnets, NAT Gateway, and route tables</li>
+          <li>Deploying containerised applications using ECS Fargate</li>
+          <li>Integrating ALB, CloudWatch monitoring, and CI/CD pipeline</li>
+        </ul>
+      </div>
+
     </section>
 
-    <section>
-      <h2>Technical Skills</h2>
+  </main>
 
-      <h3>Cloud &amp; DevOps</h3>
-      <p>AWS (S3, EC2, ECS Fargate, Lambda, API Gateway, DynamoDB, CloudFront, IAM, Route 53, CloudWatch), Terraform, Docker, GitHub Actions</p>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 David Digheji</p>
+  </footer>
 
-      <h3>Systems &amp; Networking</h3>
-      <p>Windows Server, Active Directory, DNS, DHCP, VMware, Hyper-V, Cisco, Fortinet</p>
+  <!-- Visitor Counter Script -->
+  <script>
+    const apiUrl = "https://3k8pfdds4k.execute-api.eu-west-2.amazonaws.com/prod/counter/counter"; // replace this
 
-      <h3>Scripting &amp; Tools</h3>
-      <p>Python, Bash, PowerShell, Git, VS Code, draw.io</p>
-    </section>
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("visitor-count").textContent = data;
+      })
+      .catch(error => {
+        console.error("Error fetching visitor count:", error);
+        document.getElementById("visitor-count").textContent = "N/A";
+      });
+  </script>
 
-    <section>
-      <h2>Certifications</h2>
-      <p>AWS Cloud Practitioner, Terraform Associate, CCNA, CompTIA Security+, AWS Solutions Architect Associate (In Progress)</p>
-    </section>
-
-    <section>
-      <h2>Training</h2>
-      <h3>DevSecOps Bootcamp – CyberAgoge</h3>
-      <p class="meta">8 Months</p>
-      <ul>
-        <li>Built AWS infrastructure using Terraform across EC2, S3, and VPC environments</li>
-        <li>Implemented SAST and DAST security checks in CI/CD pipelines</li>
-        <li>Gained practical experience in secure deployment and automation workflows</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Professional Experience</h2>
-
-      <h3>IT Manager</h3>
-      <p class="role-context"><strong>(Infrastructure &amp; Systems Lead)</strong></p>
-      <p class="meta">We Are Delta (formerly GP Global) | Jan 2020 – May 2022</p>
-      <ul>
-        <li>Led IT operations supporting 50+ users across multiple locations</li>
-        <li>Managed infrastructure including servers, networking, and enterprise systems</li>
-        <li>Achieved 95% ISO 9001:2015 compliance across IT processes</li>
-        <li>Maintained 99.9% uptime for critical business applications</li>
-        <li>Improved network performance by 45% through optimisation and upgrades</li>
-        <li>Reduced procurement costs by 20% through vendor and asset management</li>
-        <li>Supported hybrid infrastructure environments and contributed to system scalability and modernisation initiatives</li>
-      </ul>
-
-      <h3>Help Desk / Network Engineer</h3>
-      <p class="role-context"><strong>(Network &amp; Infrastructure Support)</strong></p>
-      <p class="meta">Conoil Plc | Jun 2007 – Dec 2019</p>
-      <ul>
-        <li>Supported 150+ users across desktops, printers, and network systems</li>
-        <li>Troubleshot and resolved infrastructure, network, and system issues</li>
-        <li>Resolved 80% of incidents within 24 hours, improving service delivery</li>
-        <li>Improved LAN performance by 20% through network optimisation</li>
-        <li>Assisted in configuration and maintenance of network devices (switches, routers)</li>
-        <li>Supported Active Directory, DNS, and DHCP environments</li>
-        <li>Contributed to system stability, monitoring, and infrastructure reliability</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <p>MSc Data Science – University of Greenwich, London</p>
-      <p>BSc Computer Science – Lagos State University, Ojo Lagos</p>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:david@daviddigheji.com">david@daviddigheji.com</a></p>
-      <p>Website: <a href="https://daviddigheji.com" target="_blank" rel="noopener noreferrer">www.daviddigheji.com</a></p>
-      <p>GitHub: <a href="https://github.com/daviddigheji" target="_blank" rel="noopener noreferrer">github.com/daviddigheji</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/david-digheji" target="_blank" rel="noopener noreferrer">linkedin.com/in/david-digheji</a></p>
-    </section>
-
-    <footer>
-      <p>© 2026 David Digheji</p>
-    </footer>
-  </div>
 </body>
 </html>
