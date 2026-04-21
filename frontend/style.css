@@ -1,11 +1,9 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -13,14 +11,12 @@ body {
   color: #e2e8f0;
 }
 
-/* Container */
 .container {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Header */
 header {
   background: #020617;
   padding: 20px 0;
@@ -47,11 +43,17 @@ header {
 }
 
 .location {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #94a3b8;
+  margin-bottom: 8px;
 }
 
-/* Links */
+.counter {
+  font-size: 0.95rem;
+  color: #f8fafc;
+  margin-top: 8px;
+}
+
 .links {
   display: flex;
   gap: 12px;
@@ -72,7 +74,6 @@ header {
   background: #0ea5e9;
 }
 
-/* Sections */
 section {
   margin: 40px 0;
 }
@@ -83,7 +84,6 @@ h2 {
   padding-bottom: 5px;
 }
 
-/* Projects */
 .project {
   margin-bottom: 25px;
 }
@@ -102,7 +102,6 @@ h2 {
   margin-bottom: 6px;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px 0;
