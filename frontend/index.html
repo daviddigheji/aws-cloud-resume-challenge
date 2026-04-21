@@ -8,13 +8,18 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="container header-content">
+      
       <div class="hero-text">
         <h1>David Digheji</h1>
         <p class="subtitle">Cloud Engineer | AWS | Terraform | DevOps</p>
         <p class="location">London, United Kingdom</p>
-        <p class="counter">Visitor Count: <span id="visitor-count" class="gold">Loading...</span></p>
+
+        <p class="counter">
+          Visitor Count: <span id="visitor-count" class="gold">Loading...</span>
+        </p>
       </div>
 
       <div class="links">
@@ -22,9 +27,11 @@
         <a href="https://github.com/daviddigheji" target="_blank">GitHub</a>
         <a href="https://daviddigheji.com" target="_blank">Portfolio</a>
       </div>
+
     </div>
   </header>
 
+  <!-- About -->
   <section class="about container">
     <h2>About</h2>
     <p>
@@ -34,6 +41,7 @@
     </p>
   </section>
 
+  <!-- Projects -->
   <section class="projects container">
     <h2>Projects</h2>
 
@@ -43,11 +51,12 @@
         Designed and deployed a production-style AWS infrastructure platform using Terraform,
         inspired by real-world fuel distribution operations across multiple locations.
       </p>
+
       <ul>
-        <li>Built modular infrastructure using Terraform, including VPC, subnets, NAT gateway, and route tables</li>
-        <li>Designed scalable architecture for ECS Fargate and Application Load Balancer deployment</li>
+        <li>Built modular infrastructure using Terraform (VPC, subnets, NAT gateway, route tables)</li>
+        <li>Designed scalable architecture using ECS Fargate and Application Load Balancer</li>
         <li>Implemented remote state management using Amazon S3 and DynamoDB</li>
-        <li>Structured the project into reusable modules and environment-based deployment layers</li>
+        <li>Structured the project into reusable modules and environment-based deployments</li>
       </ul>
     </div>
 
@@ -56,18 +65,22 @@
       <p>
         Built and deployed a static resume website using Amazon S3 and CloudFront with HTTPS.
       </p>
+
       <ul>
         <li>Configured custom domain and DNS using Route 53 / Cloudflare</li>
         <li>Implemented a serverless visitor counter using Lambda, API Gateway, and DynamoDB</li>
-        <li>Automated deployments using GitHub Actions</li>
+        <li>Automated deployment using GitHub Actions</li>
       </ul>
     </div>
+
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2026 David Digheji</p>
   </footer>
 
+  <!-- Visitor Counter Script -->
   <script>
     async function updateVisitorCount() {
       const apiUrl = "https://3k8pfdds4k.execute-api.eu-west-2.amazonaws.com/prod/counter";
