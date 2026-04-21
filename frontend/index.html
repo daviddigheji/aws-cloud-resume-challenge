@@ -22,78 +22,60 @@
       <div class="links">
         <a href="https://linkedin.com/in/david-digheji" target="_blank">LinkedIn</a>
         <a href="https://github.com/daviddigheji" target="_blank">GitHub</a>
-        <a href="#">Portfolio</a>
+        <a href="https://daviddigheji.com" target="_blank">Portfolio</a>
       </div>
 
     </div>
   </header>
 
-  <!-- Main -->
-  <main class="container">
+  <!-- About -->
+  <section class="about container">
+    <h2>About</h2>
+    <p>
+      Cloud-focused IT professional with 10+ years of experience in infrastructure, operations, and support.
+      Currently transitioning into Cloud and DevOps roles with hands-on experience building AWS-based solutions
+      using Terraform and serverless technologies. Strong in troubleshooting, system reliability, and scalable cloud architecture.
+    </p>
+  </section>
 
-    <!-- Visitor Count -->
-    <section class="visitor">
-      <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
-    </section>
+  <!-- Projects -->
+  <section class="projects container">
+    <h2>Projects</h2>
 
-    <!-- About -->
-    <section>
-      <h2>About</h2>
+    <div class="project">
+      <h3>FuelOps ECS Platform</h3>
       <p>
-        Cloud-focused IT professional with 10+ years of experience in infrastructure,
-        operations, and support. Currently transitioning into Cloud and DevOps roles
-        with hands-on experience building AWS-based solutions using Terraform and
-        serverless technologies.
+        Designed and deployed a production-style AWS infrastructure platform using Terraform,
+        inspired by real-world fuel distribution operations across multiple locations.
       </p>
-    </section>
 
-    <!-- Projects -->
-    <section>
-      <h2>Projects</h2>
+      <ul>
+        <li>Built modular infrastructure using Terraform (VPC, Subnets, NAT, Route Tables)</li>
+        <li>Designed scalable architecture using ECS Fargate and Application Load Balancer</li>
+        <li>Implemented remote state management using S3 and DynamoDB</li>
+        <li>Structured project into reusable modules and environment-based deployments</li>
+      </ul>
+    </div>
 
-      <div class="project">
-        <h3>Cloud Resume Challenge</h3>
-        <ul>
-          <li>Built and deployed a static resume website using Amazon S3 and CloudFront with HTTPS</li>
-          <li>Configured custom domain and DNS using Route 53 / Cloudflare</li>
-          <li>Implemented serverless visitor counter using Lambda, DynamoDB, and API Gateway</li>
-          <li>Automated deployment using GitHub Actions</li>
-        </ul>
-      </div>
+    <div class="project">
+      <h3>Cloud Resume Challenge</h3>
+      <p>
+        Built and deployed a static resume website using AWS S3 and CloudFront with HTTPS.
+      </p>
 
-      <div class="project">
-        <h3>Production-Ready AWS ECS Platform with Terraform</h3>
-        <ul>
-          <li>Designed and built AWS infrastructure using Terraform</li>
-          <li>Implemented VPC with public/private subnets, NAT Gateway, and route tables</li>
-          <li>Deploying containerised applications using ECS Fargate</li>
-          <li>Integrating ALB, CloudWatch monitoring, and CI/CD pipeline</li>
-        </ul>
-      </div>
+      <ul>
+        <li>Configured custom domain using Route 53 / Cloudflare</li>
+        <li>Implemented serverless visitor counter using Lambda and DynamoDB</li>
+        <li>Automated deployment using GitHub Actions</li>
+      </ul>
+    </div>
 
-    </section>
-
-  </main>
+  </section>
 
   <!-- Footer -->
   <footer>
     <p>© 2026 David Digheji</p>
   </footer>
-
-  <!-- Visitor Counter Script -->
-  <script>
-    const apiUrl = "https://3k8pfdds4k.execute-api.eu-west-2.amazonaws.com/prod/counter"; // replace this
-
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById("visitor-count").textContent = data;
-      })
-      .catch(error => {
-        console.error("Error fetching visitor count:", error);
-        document.getElementById("visitor-count").textContent = "N/A";
-      });
-  </script>
 
 </body>
 </html>
