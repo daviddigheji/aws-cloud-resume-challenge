@@ -7,101 +7,96 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <div class="container header-content">
-      
       <div class="hero-text">
         <h1>David Digheji</h1>
         <p class="subtitle">Cloud Engineer | AWS | Terraform | DevOps</p>
         <p class="location">London, United Kingdom</p>
-
         <p class="counter">
           Visitor Count: <span id="visitor-count" class="gold">Loading...</span>
         </p>
       </div>
 
       <div class="links">
-        <a href="https://linkedin.com/in/david-digheji" target="_blank">LinkedIn</a>
-        <a href="https://github.com/daviddigheji" target="_blank">GitHub</a>
-        <a href="https://daviddigheji.com" target="_blank">Portfolio</a>
+        <a href="https://linkedin.com/in/david-digheji" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/daviddigheji" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://daviddigheji.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
       </div>
-
     </div>
   </header>
 
-  <!-- About -->
   <section class="about container">
     <h2>About</h2>
     <p>
       Cloud-focused IT professional with 10+ years of experience in infrastructure, operations, and support.
       Currently transitioning into Cloud and DevOps roles with hands-on experience building AWS-based solutions
-      using Terraform and serverless technologies. Strong in troubleshooting, system reliability, and scalable cloud architecture.
+      using Terraform, container platforms, and serverless technologies. Strong in troubleshooting, system reliability,
+      and practical cloud architecture.
     </p>
   </section>
 
-  <!-- Projects -->
-<section class="projects container">
-  <h2>Projects</h2>
+  <section class="projects container">
+    <h2>Projects</h2>
 
-  <div class="project">
-    <h3>MeshGate DevOps Platform</h3>
-    <p>
-      Built a containerised full-stack application to demonstrate practical DevOps workflows,
-      including Docker, GitHub Actions CI/CD, Docker Hub integration, and secure pipeline automation.
-    </p>
+    <div class="project highlight-project">
+      <h3>FuelOps ECS Platform</h3>
+      <p>
+        Built a production-style AWS ECS Fargate platform with Terraform to show how a containerised application can run behind an Application Load Balancer with secure networking, IAM, and CloudWatch logging.
+      </p>
 
-    <ul>
-      <li>Built and ran frontend and backend services using Docker and Docker Compose</li>
-      <li>Implemented a GitHub Actions CI pipeline to automatically build Docker images</li>
-      <li>Integrated Docker Hub to push backend and frontend images from the CI pipeline</li>
-      <li>Used GitHub Secrets to securely authenticate Docker Hub access</li>
-      <li>Validated Docker Compose configuration as part of the automated workflow</li>
-    </ul>
+      <ul>
+        <li>Provisioned core AWS infrastructure including VPC, public and private subnets, internet gateway, NAT gateway, route tables, and security groups</li>
+        <li>Deployed an ECS Fargate service behind an internet-facing Application Load Balancer using IP target groups</li>
+        <li>Configured CloudWatch Logs for application log collection and operational verification</li>
+        <li>Implemented Terraform remote state management with Amazon S3 and DynamoDB</li>
+        <li>Organised the Terraform code into clear files such as <code>networking.tf</code>, <code>alb.tf</code>, and <code>ecs.tf</code> for maintainability</li>
+      </ul>
 
-    <p>
-      <a href="https://github.com/daviddigheji/meshgate-devops-platform" target="_blank">View GitHub Repo</a> |
-      <a href="https://hub.docker.com/u/daviddigheji" target="_blank">View Docker Hub</a>
-    </p>
-  </div>
+      <p class="project-links">
+        <a href="https://github.com/daviddigheji/fuelops-ecs-platform" target="_blank" rel="noopener noreferrer">View GitHub Repo</a>
+      </p>
+    </div>
 
-  <div class="project">
-    <h3>Cloud Resume Challenge</h3>
-    <p>
-      Built and deployed a static resume website using Amazon S3 and CloudFront with HTTPS.
-    </p>
+    <div class="project">
+      <h3>MeshGate DevOps Platform</h3>
+      <p>
+        Built a containerised full-stack application to demonstrate practical DevOps workflows,
+        including Docker, GitHub Actions CI/CD, Docker Hub integration, and secure pipeline automation.
+      </p>
 
-    <ul>
-      <li>Configured custom domain and DNS using Route 53 / Cloudflare</li>
-      <li>Implemented a serverless visitor counter using Lambda, API Gateway, and DynamoDB</li>
-      <li>Automated deployment using GitHub Actions</li>
-    </ul>
-  </div>
+      <ul>
+        <li>Built and ran frontend and backend services using Docker and Docker Compose</li>
+        <li>Implemented a GitHub Actions CI pipeline to automatically build Docker images</li>
+        <li>Integrated Docker Hub to push backend and frontend images from the CI pipeline</li>
+        <li>Used GitHub Secrets to securely authenticate Docker Hub access</li>
+        <li>Validated Docker Compose configuration as part of the automated workflow</li>
+      </ul>
 
-  <div class="project">
-    <h3>FuelOps ECS Platform</h3>
-    <p>
-      Designed a production-style AWS infrastructure platform using Terraform,
-      inspired by real-world fuel distribution operations across multiple locations.
-    </p>
+      <p class="project-links">
+        <a href="https://github.com/daviddigheji/meshgate-devops-platform" target="_blank" rel="noopener noreferrer">View GitHub Repo</a>
+        <a href="https://hub.docker.com/u/daviddigheji" target="_blank" rel="noopener noreferrer">View Docker Hub</a>
+      </p>
+    </div>
 
-    <ul>
-      <li>Built modular infrastructure using Terraform including VPC, subnets, NAT gateway, and route tables</li>
-      <li>Designed scalable architecture using ECS Fargate and Application Load Balancer</li>
-      <li>Implemented remote state management using Amazon S3 and DynamoDB</li>
-      <li>Structured the project into reusable modules and environment-based deployments</li>
-    </ul>
-  </div>
+    <div class="project">
+      <h3>Cloud Resume Challenge</h3>
+      <p>
+        Built and deployed a static resume website using Amazon S3 and CloudFront with HTTPS.
+      </p>
 
-</section>
+      <ul>
+        <li>Configured custom domain and DNS using Route 53 and Cloudflare</li>
+        <li>Implemented a serverless visitor counter using Lambda, API Gateway, and DynamoDB</li>
+        <li>Automated deployment using GitHub Actions</li>
+      </ul>
+    </div>
+  </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2026 David Digheji</p>
   </footer>
 
-  <!-- Visitor Counter Script -->
   <script>
     async function updateVisitorCount() {
       const apiUrl = "https://3k8pfdds4k.execute-api.eu-west-2.amazonaws.com/prod/counter";
@@ -126,6 +121,5 @@
 
     updateVisitorCount();
   </script>
-
 </body>
 </html>
