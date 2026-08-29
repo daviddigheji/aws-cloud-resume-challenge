@@ -3,106 +3,455 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>David Digheji | Cloud Engineer</title>
+
+  <meta
+    name="description"
+    content="David Digheji - Systems and Cloud Engineer portfolio covering AWS, Linux, networking, Terraform, cloud security, DevOps and automation projects."
+  >
+
+  <title>David Digheji | Systems & Cloud Engineer</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <header>
     <div class="container header-content">
+
       <div class="hero-text">
+
         <h1>David Digheji</h1>
-        <p class="subtitle">Cloud Engineer | AWS | Terraform | DevOps</p>
-        <p class="location">London, United Kingdom</p>
-        <p class="counter">
-          Visitor Count: <span id="visitor-count" class="gold">Loading...</span>
+
+        <p class="subtitle">
+          Systems &amp; Cloud Engineer | AWS | Linux | Networking | Security
         </p>
+
+        <p class="location">
+          London, United Kingdom
+        </p>
+
+        <p class="counter">
+          Visitor Count:
+          <span id="visitor-count" class="gold">
+            Loading...
+          </span>
+        </p>
+
       </div>
 
-      <div class="links">
-        <a href="https://linkedin.com/in/david-digheji" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/daviddigheji" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://daviddigheji.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
-      </div>
+      <nav class="links" aria-label="Profile links">
+
+        <a
+          href="https://linkedin.com/in/daviddigheji"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/daviddigheji"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://daviddigheji.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Portfolio
+        </a>
+
+      </nav>
+
     </div>
   </header>
 
-  <section class="about container">
-    <h2>About</h2>
-    <p>
-      Cloud-focused IT professional with 10+ years of experience in infrastructure, operations, and support.
-      Currently transitioning into Cloud and DevOps roles with hands-on experience building AWS-based solutions
-      using Terraform, container platforms, and serverless technologies. Strong in troubleshooting, system reliability,
-      and practical cloud architecture.
-    </p>
-  </section>
 
-  <section class="projects container">
-    <h2>Projects</h2>
+  <main>
 
-    <div class="project highlight-project">
-      <h3>FuelOps ECS Platform</h3>
+    <section class="about container">
+
+      <h2>About</h2>
+
       <p>
-        Built a production-style AWS ECS Fargate platform with Terraform to show how a containerised application can run behind an Application Load Balancer with secure networking, IAM, and CloudWatch logging.
+        Systems and cloud engineer with a background in business-critical
+        infrastructure, enterprise networking, Linux and Windows administration,
+        and incident troubleshooting. My recent hands-on work focuses on AWS,
+        Terraform, secure identity, cloud networking, monitoring and CI/CD.
+        I enjoy tracing problems across system, network and cloud layers,
+        documenting the root cause, and turning repeatable operational work
+        into reliable automation.
       </p>
 
-      <ul>
-        <li>Provisioned core AWS infrastructure including VPC, public and private subnets, internet gateway, NAT gateway, route tables, and security groups</li>
-        <li>Deployed an ECS Fargate service behind an internet-facing Application Load Balancer using IP target groups</li>
-        <li>Configured CloudWatch Logs for application log collection and operational verification</li>
-        <li>Implemented Terraform remote state management with Amazon S3 and DynamoDB</li>
-        <li>Organised the Terraform code into clear files such as <code>networking.tf</code>, <code>alb.tf</code>, and <code>ecs.tf</code> for maintainability</li>
-      </ul>
+    </section>
 
-      <p class="project-links">
-        <a href="https://github.com/daviddigheji/fuelops-ecs-platform" target="_blank" rel="noopener noreferrer">View GitHub Repo</a>
-      </p>
-    </div>
 
-    <div class="project">
-      <h3>MeshGate DevOps Platform</h3>
-      <p>
-        Built a containerised full-stack application to demonstrate practical DevOps workflows,
-        including Docker, GitHub Actions CI/CD, Docker Hub integration, and secure pipeline automation.
-      </p>
+    <section class="skills container">
 
-      <ul>
-        <li>Built and ran frontend and backend services using Docker and Docker Compose</li>
-        <li>Implemented a GitHub Actions CI pipeline to automatically build Docker images</li>
-        <li>Integrated Docker Hub to push backend and frontend images from the CI pipeline</li>
-        <li>Used GitHub Secrets to securely authenticate Docker Hub access</li>
-        <li>Validated Docker Compose configuration as part of the automated workflow</li>
-      </ul>
+      <h2>Core Skills</h2>
 
-      <p class="project-links">
-        <a href="https://github.com/daviddigheji/meshgate-devops-platform" target="_blank" rel="noopener noreferrer">View GitHub Repo</a>
-        <a href="https://hub.docker.com/u/daviddigheji" target="_blank" rel="noopener noreferrer">View Docker Hub</a>
-      </p>
-    </div>
+      <div class="skill-grid">
 
-    <div class="project">
-      <h3>Cloud Resume Challenge</h3>
-      <p>
-        Built and deployed a static resume website using Amazon S3 and CloudFront with HTTPS.
-      </p>
+        <div class="skill-card">
 
-      <ul>
-        <li>Configured custom domain and DNS using Route 53 and Cloudflare</li>
-        <li>Implemented a serverless visitor counter using Lambda, API Gateway, and DynamoDB</li>
-        <li>Automated deployment using GitHub Actions</li>
-      </ul>
-    </div>
-  </section>
+          <h3>AWS &amp; Cloud Security</h3>
+
+          <p>
+            IAM, IAM Identity Center, STS, MFA, Access Analyzer, VPC, EC2,
+            S3, CloudFront, Route 53, ECS Fargate, ECR, CloudWatch
+            and CloudTrail.
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>Systems &amp; Networking</h3>
+
+          <p>
+            Linux, Windows Server, Active Directory, TCP/IP, DNS, DHCP,
+            HTTP/HTTPS, routing, switching, VPN, Cisco and Fortinet.
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>Automation &amp; DevOps</h3>
+
+          <p>
+            Terraform, Bash, GitHub Actions, AWS OIDC, Git, Docker,
+            Docker Compose, PowerShell and Python fundamentals.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="projects container">
+
+      <h2>Projects</h2>
+
+
+      <!-- AEGIS -->
+      <article class="project highlight-project">
+
+        <div class="project-heading">
+
+          <h3>Aegis Cloud Security Platform</h3>
+
+          <span class="status-badge">
+            In Progress
+          </span>
+
+        </div>
+
+        <p>
+          Building a security-focused AWS platform to demonstrate secure
+          identity, credential hygiene, external-access analysis, cloud
+          hardening, threat detection and operational verification.
+        </p>
+
+        <ul>
+
+          <li>
+            Implemented IAM Identity Center with MFA, group-based access,
+            permission sets and temporary STS role sessions instead of
+            long-lived administrator credentials
+          </li>
+
+          <li>
+            Audited and remediated legacy IAM users, access keys,
+            console access and privileged group membership, then
+            verified the final credential posture
+          </li>
+
+          <li>
+            Hardened S3 public-access controls and secured CloudFront
+            access to S3 using Origin Access Control
+          </li>
+
+          <li>
+            Reviewed and tightened GitHub OIDC trust, verifying CI/CD
+            access continued to work without static AWS credentials
+          </li>
+
+          <li>
+            Investigated IAM Access Analyzer findings and completed
+            the current security baseline with zero active findings
+          </li>
+
+          <li>
+            Maintained stage-by-stage evidence, verification commands
+            and security documentation in the repository
+          </li>
+
+        </ul>
+
+        <p class="project-progress">
+
+          <strong>Completed:</strong>
+          secure identity foundation and AWS security baseline.
+
+          <strong>Next:</strong>
+          threat detection and monitoring.
+
+        </p>
+
+        <p class="project-links">
+
+          <a
+            href="https://github.com/daviddigheji/aegis-cloud-security-platform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Aegis on GitHub
+          </a>
+
+        </p>
+
+      </article>
+
+
+      <!-- FUELOPS -->
+      <article class="project">
+
+        <h3>FuelOps ECS Platform</h3>
+
+        <p>
+          Built a production-style AWS ECS Fargate platform with Terraform
+          to demonstrate container deployment, secure networking,
+          load balancing, IAM and operational logging.
+        </p>
+
+        <ul>
+
+          <li>
+            Provisioned VPC networking with public/private subnets,
+            internet gateway, NAT, route tables and security groups
+          </li>
+
+          <li>
+            Deployed an ECS Fargate service behind an internet-facing
+            Application Load Balancer using IP target groups
+          </li>
+
+          <li>
+            Configured CloudWatch Logs for application visibility
+            and operational troubleshooting
+          </li>
+
+          <li>
+            Implemented Terraform remote state with Amazon S3
+            and state locking
+          </li>
+
+          <li>
+            Integrated GitHub Actions with AWS OIDC for deployment
+            without long-lived AWS access keys
+          </li>
+
+        </ul>
+
+        <p class="project-links">
+
+          <a
+            href="https://github.com/daviddigheji/fuelops-ecs-platform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub Repo
+          </a>
+
+        </p>
+
+      </article>
+
+
+      <!-- MESHGATE -->
+      <article class="project">
+
+        <h3>MeshGate DevOps Platform</h3>
+
+        <p>
+          Built a containerised full-stack application to demonstrate
+          Docker-based service delivery, CI/CD automation and practical
+          troubleshooting across application and container layers.
+        </p>
+
+        <ul>
+
+          <li>
+            Built and ran frontend and backend services using
+            Docker and Docker Compose
+          </li>
+
+          <li>
+            Implemented a GitHub Actions CI pipeline to build
+            Docker images automatically
+          </li>
+
+          <li>
+            Integrated Docker Hub to publish backend and frontend
+            images from the pipeline
+          </li>
+
+          <li>
+            Used GitHub Secrets for Docker Hub authentication
+          </li>
+
+          <li>
+            Diagnosed service-discovery, port-mapping and
+            container-networking issues during deployment
+          </li>
+
+        </ul>
+
+        <p class="project-links">
+
+          <a
+            href="https://github.com/daviddigheji/meshgate-devops-platform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub Repo
+          </a>
+
+          <a
+            href="https://hub.docker.com/u/daviddigheji"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Docker Hub
+          </a>
+
+        </p>
+
+      </article>
+
+
+      <!-- CLOUD RESUME -->
+      <article class="project">
+
+        <h3>AWS Cloud Resume Challenge</h3>
+
+        <p>
+          Built and deployed a serverless portfolio application using
+          AWS services with HTTPS delivery, API integration and
+          automated deployment.
+        </p>
+
+        <ul>
+
+          <li>
+            Hosted the site using Amazon S3 and CloudFront with HTTPS
+          </li>
+
+          <li>
+            Configured custom domain and DNS using Route 53 and Cloudflare
+          </li>
+
+          <li>
+            Implemented a serverless visitor counter using Lambda,
+            API Gateway and DynamoDB
+          </li>
+
+          <li>
+            Automated deployment using GitHub Actions
+          </li>
+
+          <li>
+            Troubleshot IAM, CORS, Lambda and API integration issues
+            during implementation
+          </li>
+
+        </ul>
+
+        <p class="project-links">
+
+          <a
+            href="https://github.com/daviddigheji/aws-cloud-resume-challenge"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub Repo
+          </a>
+
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="certifications container">
+
+      <h2>Certifications</h2>
+
+      <div class="cert-list">
+
+        <span>
+          CompTIA Security+
+        </span>
+
+        <span>
+          HashiCorp Terraform Associate
+        </span>
+
+        <span>
+          AWS Certified Cloud Practitioner
+        </span>
+
+        <span>
+          Cisco CCNA
+        </span>
+
+        <span>
+          AWS Solutions Architect - Associate
+          <em>(In Progress)</em>
+        </span>
+
+      </div>
+
+    </section>
+
+  </main>
+
 
   <footer>
-    <p>© 2026 David Digheji</p>
+
+    <p>
+      &copy; 2026 David Digheji
+    </p>
+
   </footer>
 
+
   <script>
+
     async function updateVisitorCount() {
-      const apiUrl = "https://3k8pfdds4k.execute-api.eu-west-2.amazonaws.com/prod/counter";
+
+      const apiUrl =
+        "https://3k8pfdds4k.execute-api.eu-west-2.amazonaws.com/prod/counter";
 
       try {
+
         const response = await fetch(apiUrl);
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
         const data = await response.json();
 
         const count =
@@ -112,14 +461,28 @@
               ? JSON.parse(data.body)
               : "N/A";
 
-        document.getElementById("visitor-count").textContent = count;
+        document.getElementById(
+          "visitor-count"
+        ).textContent = count;
+
       } catch (error) {
-        console.error("Error fetching visitor count:", error);
-        document.getElementById("visitor-count").textContent = "Unavailable";
+
+        console.error(
+          "Error fetching visitor count:",
+          error
+        );
+
+        document.getElementById(
+          "visitor-count"
+        ).textContent = "Unavailable";
+
       }
+
     }
 
     updateVisitorCount();
+
   </script>
+
 </body>
 </html>
