@@ -5,20 +5,29 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+      - name: Configure AWS credentials with OIDC
+        uses: aws-actions/configure-aws-credentials@v6.2.3
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::008971670441:role/CloudResume-GitHub-DeployRole
           aws-region: eu-west-2
+          allowed-account-ids: 008971670441
+          role-session-name: cloudresume-${{ github.run_id }}
+
+      - name: Verify AWS identity
+        run: aws sts get-caller-identity
 
       - name: Sync frontend files to S3
         run: aws s3 sync frontend/ s3://daviddigheji.com --delete
