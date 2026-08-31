@@ -23,7 +23,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::008971670441:role/CloudResume-GitHub-DeployRole
           aws-region: eu-west-2
-          allowed-account-ids: 008971670441
+          allowed-account-ids: "008971670441"
           role-session-name: cloudresume-${{ github.run_id }}
 
       - name: Verify AWS identity
