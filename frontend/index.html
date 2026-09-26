@@ -229,9 +229,10 @@
         <h3>FuelOps ECS Platform</h3>
 
         <p>
-          Built a production-style AWS ECS Fargate platform with Terraform
-          to demonstrate container deployment, secure networking,
-          load balancing, IAM and operational logging.
+          Built a production-style AWS ECS Fargate platform using Terraform,
+          demonstrating Infrastructure as Code, cloud networking, CI/CD automation,
+          secure workload deployment, identity and access control, monitoring,
+          change validation and operational readiness.
         </p>
 
         <ul>
@@ -245,17 +246,14 @@
             Deployed an ECS Fargate service behind an internet-facing
             Application Load Balancer using IP target groups
           </li>
-
           <li>
-            Configured CloudWatch Logs for application visibility
-            and operational troubleshooting
+            Configured CloudWatch Logs for application visibility,
+            deployment validation and operational troubleshooting
           </li>
-
           <li>
             Implemented Terraform remote state with Amazon S3
-            and state locking
+            and state locking to support controlled infrastructure changes
           </li>
-
           <li>
             Integrated GitHub Actions with AWS OIDC for deployment
             without long-lived AWS access keys
